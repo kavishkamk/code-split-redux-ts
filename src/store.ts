@@ -19,7 +19,8 @@ export const injectReducer = (reducerMap: Record<string, Reducer<any, AnyAction>
 
   const state = store.getState();
   const previousReducers = (state['reducerList'])['reducerList'];
-  console.log(previousReducers);
+  console.log("This is previous state: ", state)
+  console.log("This is previous reducers", previousReducers);
 
   const trackedReducersList: Record<string, Reducer<any, AnyAction>> = {
     ...previousReducers,
